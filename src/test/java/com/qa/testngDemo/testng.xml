@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG Demo Suite">
+
+  <test thread-count="5" name="TestNG Demo Test - FundTransfer">
+    <classes>
+      <class name="com.qa.testngDemo.TC_FundTransfer_001"/>
+      
+    </classes>
+  </test> <!-- TestNG Demo Test -->
+  
+  
+  <test thread-count="5" name="TestNG Demo Test - BillPayment">
+    <classes>
+      <class name="com.qa.testngDemo.TC_UtilitybillPayment_002"/>
+      <class name="com.qa.testngDemo.TC_CreditCardBillPayment_003"/>
+    </classes>
+  </test> <!-- TestNG Demo Test -->
+  
+</suite> <!-- TestNG Demo Suite -->

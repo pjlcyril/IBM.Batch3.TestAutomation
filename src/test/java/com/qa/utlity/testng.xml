@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Suite" thread-count="5" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.qa.utlity.Reporting"></listener>
+	</listeners>	
+
+	<test name="Functional Test">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="Url" value="https://www.amazon.in/"/>
+		<classes>
+			<class name="com.qa.testscripts.TC_Amazon_001"></class>
+			<class name="com.qa.testscripts.TC_Amazon_002"></class>
+			<class name="com.qa.testscripts.TC_Amazon_003"></class>
+		</classes>
+	</test>
+
+	<!--   <test name="Functional Test">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="Url" value="https://jqueryui.com/droppable/"/>
+		<classes>
+			<class name="com.qa.testscripts.TC_WorkingWithActions"></class>
+		</classes>
+	</test>-->
+	<!--  <test name="Functional Test">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="Url" value="https://register.rediff.com/register/register.php?FormName=user_details"/>
+		<classes>
+			<class name="com.qa.testscripts.TC_WorkingwithAlerts"></class>
+		</classes>
+	</test>-->
+
+	<!-- <test name="Functional Test">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="Url" value="https://www.online.citibank.co.in/"/>
+		<classes>
+			<class name="com.qa.testscripts.TC_WorkingWithWindows"></class>
+		</classes>
+	</test> -->
+
+	<!-- <test name="Functional Test"> <parameter name="Browser" value="Chrome" 
+		/> <parameter name="Url" value="https://docs.oracle.com/javase/8/docs/api/"/> 
+		<classes> <class name="com.qa.testscripts.TC_WorkingwithFrames"></class> 
+		</classes> </test> -->
+
+	<!-- <test thread-count="5" name="Functional Test - Amazon - DDT"> <parameter 
+		name="Browser" value="Chrome" /> <parameter name="Url" value="http://www.amazon.in/" 
+		/> <classes> <class name="com.qa.testscripts.TC_Amazon_003" /> </classes> 
+		</test> -->
+
+
+	<!-- <test name="Functional Test - NewTours"> <parameter name="Browser" 
+		value="Chrome" /> <parameter name="Url" value="https://demo.guru99.com/test/newtours/" 
+		/> <classes> <class name="com.qa.testscripts.TC_NewTours_001" /> </classes> 
+		</test> -->
+
+
+	<!-- <test thread-count="5" name="Functional Test - Amazon - Edge" parallel="classes"> 
+		<parameter name="Browser" value="Edge" /> <parameter name="Url" value="http://www.amazon.in/" 
+		/> <classes> <class name="com.qa.testscripts.TC_Amazon_001" /> <class name="com.qa.testscripts.TC_Amazon_002" 
+		/> <class name="com.qa.testscripts.TC_Amazon_003" /> </classes> </test> -->
+
+	<!-- <test thread-count="5" name="Functional Test - Amazon - Chrome" parallel="classes"> 
+		<parameter name="Browser" value="Chrome" /> <parameter name="Url" value="http://www.amazon.in/" 
+		/> <classes> <class name="com.qa.testscripts.TC_Amazon_001" /> <class name="com.qa.testscripts.TC_Amazon_002" 
+		/> <class name="com.qa.testscripts.TC_Amazon_003" /> </classes> </test> Functional 
+		Test - Amazon -->
+
+</suite> <!-- Test Automation Suite -->
