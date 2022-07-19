@@ -23,6 +23,13 @@ public class AmazonPages {
 	}
 	
 	@FindBy(id="twotabsearchtextbox")
+	WebElement SearchTxtField;
+
+	public WebElement getSearchTxtField() {
+		return SearchTxtField;
+	}
+	
+	@FindBy(id="twotabsearchtextbox")
 	WebElement SearchTextField;
 	
 	public WebElement getSearchTextField() {
@@ -65,6 +72,26 @@ public class AmazonPages {
 		return LanguageSelector;
 	}
 	
+	@FindBy(id="nav-link-accountList")
+	WebElement AccountsandList;
+	
+	public WebElement getAccountsandList() {
+		return AccountsandList;
+	}
+	
+	@FindBy(linkText="Start here.")
+	WebElement StartHereLink;
+	
+	public WebElement getStartHereLink() {
+		return StartHereLink;
+	}
+	
+	@FindBy(id="ap_customer_name")
+	WebElement FirstNameTxtField;
+	
+	public WebElement getFirstNameTxtField() {
+		return FirstNameTxtField;
+	}
 	
 	@FindAll(@FindBy(className="icp-radio"))
 	List<WebElement> LanguageRadioBtns;
@@ -73,6 +100,20 @@ public class AmazonPages {
 		return LanguageRadioBtns;
 	}
 	
+	
+	@FindBy(id="ap_email")
+	WebElement emailIdTxtField;
+	
+	public WebElement getemailIdTxtField() {
+		return emailIdTxtField;
+	}
+	
+	@FindBy(linkText="Careers")
+	WebElement CareersLink;
+	
+	public WebElement getCareersLink() {
+		return CareersLink;
+	}
 	public AmazonPages(WebDriver driver) {
 		this.rDriver = driver;
 		PageFactory.initElements(driver, this);
