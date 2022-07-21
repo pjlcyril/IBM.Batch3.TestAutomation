@@ -1,0 +1,104 @@
+Today's Discussion:
+-------------------
+Page Object Model in Selenium
+------------------------------
+
+Why Page Object Model:
+----------------------
+
+In Selenium, the conventional approach follows to feed the locator / test object description directly into to code using driver.findElement(By.locator(locator value)).method();
+
+// When the above line of code is executed, the IDE will search for the element with certain locator of the page that is loaded on the driver instance.
+
+However it is not recommended approach, B'coz, while automating an application / implementing a test automation framework it is mandatory to follow the test automation guideline in term of reusablity of test code and its components.
+
+As per selenium test code, test object description / locator is also a component that is used in different lines of code and into multiple test code / class files..
+
+1. When the elements and its description is repeatedly used in different LoC or to different test scripts
+2. Also, the test object descrition / locator have tendancy to change at the run session and sometime when the build gets migrated, there may be a changes in the locator value.
+
+So, it is an exhaustive approach to modify the test code every time with a new descriptio.
+
+Solutions : create a separate class and hold the test object description / locator into a reference variable.
+
+A class, that holds the test object description of a WebPage is called as "Page Object Model"
+
+Page Object Model in selenium is mechanism to create an Object Repository where the description of the objects present on the pages are stored and initialized at every run session. --> Page Object Model is a design patter to create an Object repository.
+
+1. How to create Pages?
+
+As selenium is an opensource API, it do not inbuild mechanism, of create the page file or object repositoy.
+
+As we're using Eclipse IDE, which is a Java based development environment for writing and executing the code.
+
+Create a java class file to be created and structure it such way to accomodate the test object description
+
+--> A java class file that holds the description of element present on the WebPage as "Pages"
+--> com.qa.pages packages within the project folder.
+--> class used as POM should be always names as ModuleNamePages.java
+Ex: Login Module
+Classname --> LoginPages.java
+Add Employee
+ClassName --> AddEmpPages.java
+
+2. How to store the element reference into a pages(POM)?
+
+Every element have a unique locator.
+The locator and its value should be stored into a reference variable of type WebElement
+
+Syntax:
+-------
+// Locate the first occurance of an WebElement at the time of run session.
+
+@FindBy(locator="Locator value")
+WebElement ref_name;
+
+// All elements (one or more elements) matching a locator.
+
+@FindAll(@FindBy(locator="locator value"))
+List<WebElement> ref_name;
+
+
+3. How to call the Elements to the test code?
+	1. a getter method that can return the WebElement in the page class
+	2. a argument based constructor that can initialize the element present in the pages class to the driver / browser instance present in the test code class.
+----------------------------------------------
+
+Case study : 1 --> Using Page Object Model.
+-------------------------------------------
+1. Open the browser (IE / Chrome/ FF / Edge)
+2. Launch Google website "http://www.google.com/"	
+3. Type "Automation Testing" in search text field
+3.1 Fetch all the items displayed in auto suggest dropdown list.
+4. Submit the input
+5. Check if the title of google page has search term
+6. close the browser.
+---------------------------------------------------------------
+
+TestNG : Testing framework used along with Selenium for enhancing and customizing the test code.
+* Selenium being an open source API do not have sufficient classes / methods that can fully equip the code to fulfill the test automation needs.
+
+Ref: Day 1  session : How to configure TestNG into Eclise IDE.
+
+Importance on TestNG alogn with Selenium
+What are advantages of using TestNG
+What are different feature of TestNG API to be incorporated into the test code.
+
+1. Translate the Selenium Java code to Selenium TestNG code.
+	1. TestNG compiler is used to trigger test execution
+	2. How the HTML crystal reports is generated post execution
+** We can't used static void main() --> replaced with non-static method.
+
+*When a non static method is declared with '@Test' annotation from TestNG. The method below the annotation is called as "Test Case" that has a potential feature under test.
+
+@Test is an annotation from TestNG library.
+
+Tomorrow's session:
+------------------
+Importance on TestNG along with Selenium
+What are advantages of using TestNG
+What are different feature of TestNG API to be incorporated into the test code.
+
+
+
+

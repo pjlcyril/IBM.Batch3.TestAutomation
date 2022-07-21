@@ -1,0 +1,166 @@
+Today's discussion:
+-------------------
+Abstract methods of WebDriver interface
+Continue Test Automation process
+Object Identification mechanism
+--------------------------------------------------------------------
+
+Abstract methods of WebDriver interface
+
+API documentation for the WebDriver interface. --> selenium.dev
+
+WebDriver interface that extends SearchContext interface has 13 abstract methods that are used to control the browser or perform some actions on the WebElements (findElement() & findElements())
+
+Abstract methods: ref : TC_TC_DemoAmazon.java
+-----------------
+1. get(String Url) --> used to launch an URL on the driver ( Browser as configured in the test code above the get() statement).
+getCurrentUrl()
+getTitle()
+getPagesource()
+getWindowHandle()
+getWindowHandles()
+switchTo()
+navigate()
+manage()
+findElement()
+findElements()
+close()
+quit()
+-------------------------------------------------------------------------------
+
+Pre-requisite:
+-------------
+1. The web application should be up and running
+2. Test scenario with the corresponding test case ( collection of test step , test data, and expected come)
+3. Test automation guidelines
+
+** On the Webpage the interactions (click/type/select/drag/drop etc) are performed on the WebElements(element / test object / GUI entity)
+
+** On WebPage --> WebElements --> Interactions should be performed.
+
+WebElements:
+-----------
+Locator : used by the automation tool for reaching the element on the page
+Actions : What user event (Keyboard / Mouse action). What interaction to be perform
+
+Example:
+
+Login Page -->
+1. User name text field --> Type "Kim Smith"
+2. Password text field --> Type "mercury"
+3. Keep me signed in check box --> click for selection
+4. Login button --> click 
+
+
+Structure of test code : Collection of test object, test object description, method, test data & expected values
+
+Test Object:  Object under test --> WebElement
+Test Object Description : Gui reference to reach the test object --> Locators
+Methods : User events : Abstract methods in the WebElement interface
+Test data : input values : hard code / read them from external sources (excel/xml/db/propertied/csv/any flatfiles etc.)
+Expected values : what observation an automation tool has make at the run session.
+
+Test Automation Process : step by step process to automation an application.
+********************************************************************************************
+1. Test Designing Phase:
+-----------------------
+
+1. Create GUI reference : It is an object identification mechanism to identify the test objects (WebElements) present on the WebPage.
+			1. Working with Locators
+			2. Hard code the locators in the code 
+			3. Create Page Object Model
+
+2. Create the test code : Writing the test code as per the test scenario to define what interactions to be performed on the test object / webelement.
+			1. Selenium WebDriver API caters different class / interface with the required amount abstract methods the can help to translate the user events on the WebElements.
+
+3. Customize the test code : Enhancing the test code as per test scenario, test automation needs and test automation guidelines.
+		test automation needs : ref: Day 1 : cross browser, Repeated input / data driven testing , regressional testing etc.
+		test automation guidelines : ref: Day 2 : Organized , readablity, reusable, optimized, etc.
+		Selenium API + Java library + TestNG framework + Apache POI + Common IO + ExtentReports
+
+4. Debug the test code : Check the test code for syntax and logical errors.
+
+	** The test code should be logically written as per the test scenario. Any logical deviations due to bad coding practice cannot be considered as defects in the application.
+*****************************************************************************************
+
+2. Test Execution phase:
+-------------------------
+
+5. Run the test code : executing the test code against the application
+				
+			@ Designing phase : the test code in executed individually
+			@ Execution phase : Run the test suite ( is a collection of multiple test case / test codes)
+					1. The test suite using testng.xml
+					2. run the test suite using pom.xml --> Eclipse IDE
+					3. run the pom.xml from the CLI --> Apache Maven
+					4. run the pom.xml on Jenkins platform --> CICD : DevOPs will the code testng.xml file and run it on Jenkins.
+
+--> Pull the project from local system / PC
+--> pull the project from GitHub
+--> pull the project as freestyle project and run as Windows batch command.
+
+Will firstly configure pom.xml with testng.xml(test suite)
+Secondly, The Jenkins will call the pom.xml file to run the testng.xml.
+
+
+
+6. Test execution results : HTML dashboard to capture the results into the project location.
+********************************************************************************************
+
+3. Test Maintenance phase:
+--------------------------
+7. Create and maintain the test artifacts on the centralized locations like GitHub/ SVN.			
+-------------------------------------------------------------------------------------------
+
+Object Identification mechanism:
+--------------------------------
+
+It is a process of finding the physical description for WebElement using locators
+
+
+Selenium library is already pre-loaded with different types of properties that are recommended for identification --> Locators
+
+Locators : Physical description recommended by selenium to identify an object at the run session
+
+Amongst the list of attributes from the HTML code, which are the locators?
+
+Amongst the locators, which are those locators that are fit for identification --> decided based on the unique and stablility of a locator
+Feed the code with prescribed locators, so that the tool will reach those elements matching the locator value at the run session
+
+Uniqueness : no 2 elements can have same locators
+Stability : value of locator shoudn't be changing dynamically.
+
+** Any locators chosen should be unique by scope and stable by nature.
+
+Locators are categorized into 2 types:
+	1. Attribute based locators : Fetched from the HTML design of a code
+
+		1. HTML ID : 1st priority : Unique & Stable
+
+		2. Name : 2nd priority : Unique but at times it us unstable. 
+			* if the value of the name changes dynamically, it can't be used for identification.
+
+		3. Class name : Last preference. ** Several constraints.
+			1. One or more elements can have same class
+			2. If the value of class name have a space, it can't be used for identification.
+
+		4. LinkText : Text present on the hyper link is used for reaching the hyperlinks.
+
+		5. Partial link text : SubString of link Text can be used for reaching the hyperlinks
+** 4 & 5 locators are used only for hyperlinks. Elements with <a> tag.
+
+		6. TagName : TagName is recommended when to reach one more element by it's category
+		<input> ,<a>, <button> ,<select> etc...
+
+	2. Structure based locators : Rely on the structure of page . Alternative identification mechanism used when the  attribute based properties are not sufficiently available / it is enough to identify and element.
+
+		1. xPath
+		2. CSS
+----------------------------------------------------------------------------------------------
+Tomorrow's topic for discussion:
+--------------------------------
+1. How to fetch the locators
+2. How to feed the locators in the test code
+3. How to perform interaction on the WebElements
+4. Page Object Model
+----------------------------------------------------------------------------------------------

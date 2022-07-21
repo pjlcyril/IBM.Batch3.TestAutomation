@@ -1,0 +1,51 @@
+Today's Topic:
+--------------
+
+Test maintenance phase using GitHub
+
+What is GitHub
+How a Test automation engineer is expected maintain the test artifacts on the GitHub, by collaborating the with other Test automation engineers.
+-------------------------------------------------------------
+
+GitHub : Is an open source remote repository where the the project artifacts can be maintained in a structured manner.
+
+GitHub is called as Version control System, will enable the user to track and maintaint the changes done to the project. History of revision done to the project / project artifacts.
+
+GitHub: is remote repository / centralized location where the projects can be stores and share the access to the designated people to access the work aroung remotely.
+
+Git : Local Repository
+GitHub : Remote Repository : hosting server
+
+TL : Work Around to be performed by TL.
+-----------------------------------------
+
+1. Create the project folders and file structure in the local PC
+2. Add the common files and code
+3. Project should be created in GitHub location
+4. Push the project to the github
+	Workflow :
+		Project initialized into local repo --> Git
+		File & folders need to registered / make an entry --> staging ( Untracked --> tracked mode)
+		push the project
+5. Add the collaborators to access the project
+6. Review the PR & content in the branch
+7. Approve / Reject with comments
+8. IF approved , the content of the colloborator should be merged into the master copy
+
+
+QA - Collabotor:
+----------------
+1. Accept the invitation as collaborator
+2. Project should be cloned into their local pc --> Master copy
+3. new Add / modify the code / workaround into the project --> Create a branch and make entry into the branch
+4. Work flow to push the content of new brach to GitHub (TL's)
+5. Create the PullRequest --> notify the TL to review the content in the branch
+
+
+
+		
+
+
+
+
+

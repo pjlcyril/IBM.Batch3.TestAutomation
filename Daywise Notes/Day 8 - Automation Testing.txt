@@ -1,0 +1,95 @@
+Today's Session
+------------------
+1. How read the data from Excel and parse to an Object[][] in @DataProvider method
+2. Asserts in TestNG
+3. Extent Reports
+--------------------------------------------------------------------------------------------
+
+1. How read the data from Excel and parse to an Object[][] in @DataProvider method
+
+
+1. Test code with a data provider method --> method annotated as @DataProvider
+2. Generic class with the methods to retrive the data from excel file in a systematical approach.
+
+** To work with excel files , selenium / java do not have any in-build class / references.
+** Apache poi API is used to work with MS office products. --> download the apache poi dependency from mvnrepository.
+
+TestCode:
+---------
+method annotated as @DataProvider
+String XFile --> location of excel workbook
+String xSheet --> SheetName from where the data to be read
+
+8. call the ExcelUtility.class with required abstract methods 
+
+// based on the xFile location and xSheet name , the celldata should be read.
+
+
+
+ExcelUtility.java:
+------------------
+// Methods that can read the data from the excel book with sheet in a systematical way
+
+1. Path of excel file
+2. the file should be opened in a read mode
+3. recognized as an excel work book
+4. reach to specific work sheet from the work book
+5. row count : # of rows
+6. cell Count : from each row what is the cell count # cell
+7. Read the value from each cell of a row in the String format
+
+
+******************************************************************************************
+
+2. Asserts in TestNG : Checkpoints used to compare the expected values against the actual value.
+
+Values --> string / int / Object / boolean  etc.
+
+If the EV = AV, the test returns passed else failed.
+
+** Asserts should be used only in the methods annotated as @Test.
+** a single @Test method can have one or more assert used.
+
+2 types of Assert classes
+------------------------
+1. Hard assert -- Assert Class
+
+When a hard assert is used, if there is a mismatch in expected and actual value, the test will return fail along with the test gets terminated in the line of Assert.
+**the test will not continue to run the lines below the failed assert.
+
+
+2. Soft assert --> SoftAssert Class
+When a hard assert is used, if there is a mismatch in expected and actual value, the test will return fail but continues the execution till the end.
+----------------------------------------------------------------------------------------
+Case study : 1
+---------------
+1. Open the browser (IE / Chrome/ FF / Edge)--> sourced from testng.xml	
+2. Launch Google website "http://www.google.com/" --> sourced from testng.xml	
+3. Type "ItemName" in search text field --> sourced from @DataProvider method should read the data from TestData.xlsx workbook from Sheet2
+3.1 Fetch all the items displayed in auto suggest dropdown list.
+4. Submit the input
+5. Check if the title of google page has search term
+6. close the browser.
+
+
+------------------------------
+1. Selenium + TestNG creates a HTML reports that are customizable
+2. the TestNG reports are appended on every test execution
+3. We don't demographic representation of test execution / Dashboard kind of a report.
+---> ExtentReports & AllureReports API..
+
+
+
+Upcoming Topic for discussion:
+-----------------------------
+
+How to generate the customizable HTML reports using ExtentReports API
+
+
+
+
+
+
+
+
+

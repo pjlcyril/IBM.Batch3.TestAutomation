@@ -1,0 +1,75 @@
+Today's Discussion:
+-------------------
+What is TestNG
+Importance on TestNG along with Selenium
+What are advantages of using TestNG
+What are different feature of TestNG API to be incorporated into the test code.
+----------------------------------------------------------
+
+TestNG is a java based testing framework inspired by Junit.
+
+It is used along with Selenium for customization and enhancement of the test code as per the test scenario, test automation needs and test automation guidelines...
+
+TestNG is framework / API with collection of java based libraries ( class / interfaces / annotations)
+
+** Selenium being an open source tool do not have sufficient features / fuctionalities to automate and application fully.
+
+TestNG along with Selenium Test automation needs...
+
+Benefits of using TestNG along with Selenium:
+--------------------------------------------
+
+1. Generate the HTML report post execution
+2. Control the flow of execution using different types of annotations.
+3. Asserts : Checkpoints used to compare expected values against the actual value --> Conditional verifications --> Hard assert & Soft assert
+4. Test suite executions: we can the group of test using a suite --> testng.xml
+5. Parallel testing
+6. Cross Browser testing
+7. Parameterization : reading the data from external sources --> @Parameters & @DataProvider
+8. Prioritize, Enable / Disable the test, grouping etc.
+
+------------------------------------------------------------------------------------
+Annotations in TestNG:
+
+Is a pre-defined class in TestNG library used to declare a non static method.
+The behaviour of the method below the annotation is completed controlled by the type of an annotation used.
+
+Categorized into 3 types:
+--------------------------
+
+1. Annotations used for test fixtures :
+
+Test fixtures are methods which are created to hold the code for pre & post conditions.
+
+Always starts with either @Before  or @After.
+
+@BeforeSuite, @BeforeTest, @BeforeClass, @BeforeMethod
+@AfterSuite, @AfterTest, @AfterClass, @AfterMethod
+
+2. Annotations used for test case: @Test
+
+The method below the @Test annotation is called as test case that will have potential functionaliy under test
+** A single class can have multiple @Test method.
+
+
+3. Annotations used for paramterization --> 
+	@Parameters : read the parameter value from a xml files
+	@DataProvider : read to data from an Object[][]
+
+Structure of TestNG code: / Order of execution.
+<suite>
+	<test>
+		<classes>
+			<class name = "">
+		</classes>
+	</test>
+</suite>
+<Suite> --> <test(s)> --><Classe> --> methods (@Test)
+
+official website of Testng: testng.org
+
+******************************************************************************
+
+
+
+

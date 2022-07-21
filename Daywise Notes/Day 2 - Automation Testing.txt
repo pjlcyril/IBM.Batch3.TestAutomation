@@ -1,0 +1,137 @@
+Today's discussion:
+----------------------
+Test Automation Process
+WebDriver Architecture
+WebDriver class Diagram
+Abstract methods of WebDriver interface
+-----------------------------------------------
+Web application flow :
+---------------------
+Browser --> Url(web application) --> Elements(text fields,buttons, radio, list, combo etc) --> user events(click, type,select, drag,drop etc..)
+
+Test Scenario : validate search an item functionality in amazon application
+
+Test steps: Test steps, test data & expected values.
+
+1. Open the browser (IE / Chrome/ FF / Edge)
+2. Launch amazon website "http://www.amazon.in/"	
+3. Check if the user is landed on the amazon home page
+4. Select Books as category
+5. Enter Da vinci code the search item text field
+6. Click the magnifier button
+7. The items related to search term should be loaded
+
+
+Test Automation Process is a systematical approach in automation an application / software.
+
+The activites are primarily categorized into 3 phases.
+
+Test designing + Test execution + Test maintenance 
+
+Test designing : writing the test code as per the test scenario and test automation guidelines
+Test execution : execute the test code against the application and generate the test results
+Test maintenance : Maintaining the test artifacts in the centralized repository while working with different team member and collaborate the work around while connecting remotely.
+
+
+When do we call a code as test code?
+
+a code written to test the functionality of an application.
+
+test code: lines of code that can perform some sequence of actions used to test the application.
+
+writing a test code, it is a process of traslating the test cases into a machine understandable program that can test the application.
+
+Always, the test code should be feeded with the desired action, input and expected outcome to perform testing.
+
+Where do we get to understand the test scenario?
+From the test case document.
+
+What are the test automation guidelines and who defines it?
+1. Uniformity
+2. Standard coding conventions
+3. Organized
+4. Reusuablity
+5. Readablity
+6. Reviewable
+7. Optimized 
+--------------------------------------------------------------------------------------
+Test Automation Process : step by step approach to automate an application using selenium.
+
+*Code written that can:
+1. Launch the browser
+2. Open an URL
+
+**Browser is called as Driver / WebDriver
+
+WebDriver is API with the collection of self-contained libraries
+
+These libraries are collection of classes & interfaces.
+
+What is a WebDriver architecture to launch a browser?
+
+1. Download the driver binaries from selenium.dev/download * check the version of the browser should be same as the version of driver binary.
+2. Create the environment variable in the test code the configure the path of driver binary
+	System.setProperty("Key","Value");
+
+	Ex: Chrome Browser:
+		Key : webdriver.chrome.diver
+		value : path of the driver binary
+	Ex: Edge Browser:
+		Key : webdriver.edge.diver
+		value : path of the driver binary
+	Ex: IE Browser:
+		Key : webdriver.ie.diver
+		value : path of the driver binary
+	Ex: Firefox Browser:
+		Key : webdriver.gecko.diver
+		value : path of the driver binary
+
+3. Create a object reference and call reference of the respective driver class.
+
+	ChromeDriver driver = new ChromeDriver(); // chrome browser
+
+// EdgeDriver();
+// FirefoxDriver();
+// InternetExplorerDriver();
+
+What happens if the version of browser changes automatically?
+
+** Download the relevant version of driver binary every time when there is a change in version of browser.
+
+instead the driver binaries can be replaced with WebDriver manager
+
+WebDriverManager is an open source API that triggers the driver binaries from docker location at the run session.
+
+It works the same even if the version of the browser changes.
+
+
+
+How to incorporate the WebDriverManger?
+
+1. Download the dependency for WebDriverManager
+2. Replace the statement for environment variable i.e., System.setProperty with the relevant code from WebDriverManager API.
+
+----------------------------------------------------------------------------------------
+ChromeDriver(); 
+EdgeDriver();
+FirefoxDriver();
+InternetExplorerDriver();
+
+Are the WebDriver implementation.
+
+What is a WebDriver interface?
+
+WebDriver is a remote control interface that enables introspection and control of user agents (browsers). The methods in this interface fall into three categories:
+Control of the browser itself
+Selection of WebElements
+Debugging aids
+
+Class Diagram for WebDriver interface.
+-----------------------------------------
+
+
+
+
+
+
+

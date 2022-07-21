@@ -1,0 +1,18 @@
+Today's Topic for discussion:
+-----------------------------
+
+How to generate the customizable HTML reports using ExtentReports API
+
+* Selenium / TestNG do not have in-built mechanism to generate the crystal that can be considered as Dash board for test execution summary.
+
+* ExtentReport API used to generate the HTML reports based on the Test execution status.
+
+
+1. Crystal HTML report to be created for every test execution --> Reports folder
+
+2. Based on the TestNG results, and entry should be made in the HTML report for the test is Passed / Failed / Skipped
+3. Represent the test execution status in pie graph .
+4. Add the screenshot for the test based on the test results --> If the test failed.
+
+
+**

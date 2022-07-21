@@ -1,0 +1,51 @@
+Today's Session:
+----------------
+JavaScriptExecutor - Interface used to perform JavaScript actions on the Browser isntance.
+
+
+1. ScrollBy --> Horizontal & vertical scrolls
+2. ScrollBy the presence of an element
+
+
+--------------------------------------------------------
+
+Synchronization Point
+
+It is a process of matching the anticipated time between the tool and the application
+
+Tool is faster than the application under test, We need use an extra time delay for smooth execution of the test code.
+
+Available options:
+------------------
+
+Thread.sleep(timeout) : Java function will pause the execution till the timeout.
+* Not recommended approach.
+
+ImplicitWait : is performed on the driver.
+
+* to wait for the element to be present on the driver instance.
+
+* ElementNotFound / ElementNotInteractable.
+
+driver.get("url");
+// code to deal with the elements based on the presence on the pages
+driver.close();
+// The tool will implicitly wait till the element is loaded on the browser instance.
+// We can choose maximum timeout while declaring the implicit wait
+// ImplicitWait has auto=cutoff mechanism to skip the unused time and jump to next line of execution
+// recommended to use implicit wait on the browser once the browser is launch.
+// The implicitWait will automaticall wait for the presence of element on the page till the browser is terminated thru driver.quit() or diver.close();
+
+
+PageLoadTime : Used on the driver wait till all the elements on the page are loaded.
+
+
+ExplicitWait : Browser & Element on the browser till certain expected conditions are met.
+
+
+Timeout will break once the condition is met.
+
+Condition to break the timeout should be explicitly defined
+WebDriverWait class.
+
+---------------------------------------------------------------------------------------------

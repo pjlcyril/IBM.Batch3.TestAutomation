@@ -1,0 +1,113 @@
+Day 7:
+------
+Today's discussion:
+-------------------
+1. Parallel testing
+2. Cross browser testing
+3. Parameterization in TestNG using @Parameters & @DataProvider
+4. Parameterization using properties file
+============================================================
+
+1. Parallel testing : Through testng.xml we can control the test / class / method with in a suite to run parallel 
+
+Run a test in a suite parallelly:
+
+<suite name="Test Automation Suite" thread-count="5" parallel="tests">
+
+Run a class in a test parallelly:
+
+<test thread-count="5" name="Functional Test - Amazon - Chrome" parallel="classes">
+----------------------------------------------------------
+
+2. Cross browser testing
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Suite" thread-count="5" parallel="tests">
+  <test thread-count="5" name="Functional Test - Amazon - Edge" parallel="classes">
+  <parameter name="Browser" value="Edge"/>
+    <classes>
+      <class name="com.qa.testscripts.TC_Amazon_001"/>
+      <class name="com.qa.testscripts.TC_Amazon_002"/>
+      <class name="com.qa.testscripts.TC_Amazon_003"/>
+    </classes>
+  </test> <!-- Functional Test - Amazon -->
+  
+  <test thread-count="5" name="Functional Test - Amazon - Chrome" parallel="classes">
+  <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="com.qa.testscripts.TC_Amazon_001"/>
+      <class name="com.qa.testscripts.TC_Amazon_002"/>
+      <class name="com.qa.testscripts.TC_Amazon_003"/>
+    </classes>
+  </test> <!-- Functional Test - Amazon -->
+  
+</suite> <!-- Test Automatio Suite -->
+
+***********************************************************************************
+
+Parameterization in Selenium:
+-----------------------------
+
+** Not every line of code can be parameterized
+** Only the lines that can parse the data or deal with input value can be parameterized
+
+What is a parameter?
+
+A parameter is a variable which can hold the data / value
+
+What is parameterization?
+
+It is a process of sourcing the data from external sources like(xml,excel,database,text,properties, flatfiles,csv etc) to the test code through a parameter/ variable
+
+At the run the value of the parameter is fetched and sourced to the line within a test code.
+
+Why parameterization?
+
+According to the test automation guidelines, the elements of the test code is expected reused / optimized.
+
+The test code is expected to run with different values, instead of modifying the code, we separate the test data and maintain it into external sources.
+
+1. Modify the test data frequently
+2. Repeated input testing and the data is available in different sources...
+
+2 types of parameterization
+
+1. Single input parameterization : One input will be read from the external source
+
+	1. Reading the data from XML file
+
+The suite created (testng.xml) do have a tag <parameter> will hold the variable with string
+
+Into, test code using @Parameters we can read the parameter value from the testng.xml file
+any methods annotated as test fixture(@Before/@After) / test case(@Test) can be topped with @Parameters({"ParameterName"})
+
+@Parameters is sourcing  the value from testng.xml and returns as String to the method the annotation.
+
+	2. Reading the data from properties file
+
+2. Multiple input parameterization : read the multiple input repeatedly from the external sources
+	1. Reading the data from a method that returns an Object[][]
+	2. Reading the data from an Excel / DB / CSV
+
+
+
+Case study : 1
+---------------
+1. Open the browser (IE / Chrome/ FF / Edge)--> sourced from testng.xml	
+2. Launch Google website "http://www.google.com/" --> sourced from testng.xml	
+3. Type "ItemName" in search text field --> sourced from @DataProvider method
+Automation Testing
+Functional Testing
+Non functional testing
+3.1 Fetch all the items displayed in auto suggest dropdown list.
+4. Submit the input
+5. Check if the title of google page has search term
+6. close the browser.
+---------------------------------------------------------------
+
+Tomorrow's Session
+------------------
+1. How read the data from Excel and parse to an Object[][] in @DataProvider method
+2. Asserts in TestNG
+3. Extent Reports

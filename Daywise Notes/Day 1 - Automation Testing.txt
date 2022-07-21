@@ -1,0 +1,133 @@
+Test Activities :
+----------------
+
+1. Test planning
+2. Test designing
+3. Test coding (Only when there is a decision to automate)
+4. Test execution
+5. Test Maintenance
+
+-----------------------------------------------------------------------
+Why Automation Testing?
+When an application under test is expected to be tested repeatedly. It is preferred to be automated.
+>> Retesting, Regression Testing, Repeated input testing, Compatiablity testing / Cross browser testing
+>> Non-functional testing : Performance testing, Stress Testing , Load Testing
+------------------------------------------------------------------------
+What is Automation Testing?
+
+A software (Automation testing tool) testing another software(Application Under Test)
+
+A software tool is used to observe the functional behaviour of a software.
+The QA is expected to instruct the automation tool through a code(test code) to make certain observation of the software under test.
+
+What are the test automation activities?
+
+1. Test designing : Writing the test code
+2. Test execution : Execute the test code
+3. Test maintenance : maintain the test code
+
+SDET : Software Development Enginee For Testing.
+------------------------------------------------
+Selenium + TestNG + Apache POI + ExtentReports + Apache Maven + Jenkins + GitHub etc.
+
+"It is a process of recording and playing back the user event to test the application for positive and negative test conditions".
+
+recording : writing the test code 
+playing back : executing the test code
+user event : user interactions through Keyboard / mouse transactions
+
+---------------------------------------------------------------
+
+Pre-requisite of Test automation:
+---------------------------------
+1. Need to automated
+2. Test cases that are chosen for automation
+3. Test environment
+4. Stable product / application
+5. Test automation guidelines
+6. Programming knowledge. - Java
+
+** What can't be automation at a functional point of view?
+OTP, Multi faction authentication, Captcha, Digital signature, Virtual Key board etc.
+
+----------------------------------------------------------------------------------
+
+List of software :
+------------------
+
+1. Jdk 8 or 11
+2. Eclipse IDE - Java EE developers - https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-06/R/eclipse-jee-2022-06-R-win32-x86_64.zip&mirror_id=1287
+3. TestNG plugin should be installed in Eclipse IDE.
+Install via Eclipse Marketplace
+Go to the TestNG page on the Eclipse Market Place and drag the icon called "Install" onto your workspace.
+Install from update site
+Select Help / Install New Software...
+Enter the update site URL in "Work with:" field:
+Update site for release: https://testng.org/testng-eclipse-update-site.
+Make sure the check box next to URL is checked and click Next.
+Eclipse will then guide you through the process.
+------------------------------------------------------------------------------------
+
+Introduction to Selenium:
+--------------------------
+
+Selenium is an open source web automation tool.
+
+Developed by ThoughtWorks - 2004
+
+History of Selenium, Details & documentation related to Selenium tool --> http://www.selenium.dev/
+
+* Selenium is an automation tool used to functional test a web application.
+Selenium is a functional testing tool used to test web application from front end / GUI --> Black box testing tool.
+
+* Multi Language, Multi Browser & Multi platform.
+
+As it is an open source all the components of Selenium can be free downloaded from the official web site of Selenium "Seleniu.dev"
+
+There are 3 primary components of Selenium:
+
+1. Selenium IDE (Integrated Development Environment)
+2. Selenium RC(Outdated) / WebDriver
+3. Selenium GRID
+-------------------------------------------------------------------------
+
+WebDriver : It is a selenium component used to automate the Web application.
+
+WebDriver do not have an IDE / interface to write and run the program. It is downloadable as an API / self- contained library based on the language specification.
+
+WebDriver supports different programing languages / client-bindings for coding.
+
+IDE has to be chosen based on the choice of programing language.
+
+Primary language is Java so Eclipse IDE as an automation tool integrated with Selenium as a platform to write and run the test automation code.
+
+** IntelliJ / Spring Test Suite instead of Eclise IDE.
+----------------------------------------------------------------------------
+
+1. How to create a project in Eclipse IDE. --> *Maven project
+2. How to inject the selenium library to Eclipse project and make use of it as automation tool. --> Selenium library / dependency into the maven project created as per step1.
+*****************************************************************************************
+
+Tomorrow's discussion:
+----------------------
+Test Automation Process
+WebDriver Architecture
+WebDriver class Diagram
+Abstract methods of WebDriver interface
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+Today's topic for discussion:
+--------------------------------
+1. How to fetch the locators
+2. How to feed the locators in the test code
+3. How to perform interaction on the WebElements --> Text fields, Select, Button, AutoSuggest
+	By class, WebElement interface --> sendKeys , Click(), getAttribute, getText(), getTagname(), clear(), Submit(), isEnabled(),isDisplayed(), isSelected(), Select class --> SelectByVisibleText
+		--> findElement & findElements()
+4. Abstract methods with Select class
+5. Page Object Model
+----------------------------------------------------------------------------------------------
+
+Test Scenario : validate search an item functionality in amazon application
+
+Test steps: Test steps, test data & expected values.
+
+1. Open the browser (IE / Chrome/ FF / Edge)
+2. Launch amazon website "http://www.amazon.in/"	
+3. Check if the user is landed on the amazon home page
+4. Select Books as category --> List, locator, Select
+5. Enter Da vinci code the search item text field --> search text field, Locator?, type the action
+6. Click the magnifier button --> Button, locator?, click
+7. The items related to search term should be loaded // group of elements --> findElements() --> search for all the elements matching a locator and returs List<WebElement> 
+8. close the browser
+
+Step 4 to 6 --> findElement() --> Return the first occurance of a WebElement matching a locators
+
+WebElements:
+-----------
+Locator : used by the automation tool for reaching the element on the page
+Actions : What user event (Keyboard / Mouse action). What interaction to be perform
+
+
+
+HTML code for Search text field:
+--------------------------------
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
+
+Locators:
+----------
+id="twotabsearchtextbox"
+name="field-keywords"
+class="nav-input nav-progressive-attribute"
+tagName=input
+
+
+<span class="a-size-medium a-color-base a-text-normal">The Da Vinci Code: (Robert Langdon Book 2) (Robert Langdon, 2)</span>
+<span class="a-size-medium a-color-base a-text-normal">The Da Vinci Code</span>
+<span class="a-size-medium a-color-base a-text-normal">The Da Vinci Code 10th Anniversary Edition</span>
+
+
+//TagName[@Attributename='AttributeValue']
+//span[@class='a-size-medium a-color-base a-text-normal']
+
+----------------------------------------
+
+Case study : 1
+---------------
+1. Open the browser (IE / Chrome/ FF / Edge)
+2. Launch Google website "http://www.google.com/"	
+3. Type "Automation Testing" in search text field
+3.1 Fetch all the items displayed in auto suggest dropdown list.
+4. Submit the input
+5. Check if the title of google page has search term
+6. close the browser.
+---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
