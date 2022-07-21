@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Test_Automation_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Automation_Suite" title="com.qa.testscripts.TC_Amazon_001" class="method navigator-link" hash-for-method="searchItem(Beauty, Body lotions)">searchItem(Beauty, Body lotions)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_Automation_Suite" title="com.qa.testscripts.TC_Amazon_002" class="method navigator-link" hash-for-method="footerLinks">footerLinks</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -120,6 +120,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Test_Automation_Suite" title="com.qa.testscripts.TC_Amazon_001" class="method navigator-link" hash-for-method="searchItem(Appliances, Washing machines)">searchItem(Appliances, Washing machines)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Automation_Suite" title="com.qa.testscripts.TC_Amazon_001" class="method navigator-link" hash-for-method="searchItem(Beauty, Body lotions)">searchItem(Beauty, Body lotions)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -147,14 +152,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchItem(Beauty, Body lotions)">
-                  </a> <!-- searchItem(Beauty, Body lotions) -->
-                  <span class="method-name">searchItem</span>
-                  <span class="parameters">(Beauty, Body lotions)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="searchItem(Furniture, Wooden Tables)">
                   </a> <!-- searchItem(Furniture, Wooden Tables) -->
                   <span class="method-name">searchItem</span>
@@ -179,10 +176,33 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="searchItem(Beauty, Body lotions)">
+                  </a> <!-- searchItem(Beauty, Body lotions) -->
+                  <span class="method-name">searchItem</span>
+                  <span class="parameters">(Beauty, Body lotions)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="searchItem(Books, Da vinci code)">
                   </a> <!-- searchItem(Books, Da vinci code) -->
                   <span class="method-name">searchItem</span>
                   <span class="parameters">(Books, Da vinci code)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Automation_Suite-class-passed -->
+          <div class="suite-Test_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.testscripts.TC_Amazon_002</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="footerLinks">
+                  </a> <!-- footerLinks -->
+                  <span class="method-name">footerLinks</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,15 +216,16 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;tests&quot; name=&quot;Test Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite name=&quot;Test Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.qa.utlity.Reporting&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Functional Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Functional Test&quot;&gt;
     &lt;parameter name=&quot;Url&quot; value=&quot;https://www.amazon.in/&quot;/&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.testscripts.TC_Amazon_001&quot;/&gt;
+      &lt;class name=&quot;com.qa.testscripts.TC_Amazon_002&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Functional Test --&gt;
 &lt;/suite&gt; &lt;!-- Test Automation Suite --&gt;
@@ -218,7 +239,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Functional Test (1 class)</span>
+                <span class="test-name">Functional Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -244,32 +265,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchItem')
 data.setCell(0, 2, 'com.qa.testscripts.TC_Amazon_001')
-data.setCell(0, 3, 6636);
+data.setCell(0, 3, 11114);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchItem')
 data.setCell(1, 2, 'com.qa.testscripts.TC_Amazon_001')
-data.setCell(1, 3, 5283);
+data.setCell(1, 3, 9721);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'searchItem')
 data.setCell(2, 2, 'com.qa.testscripts.TC_Amazon_001')
-data.setCell(2, 3, 5203);
+data.setCell(2, 3, 4580);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'searchItem')
 data.setCell(3, 2, 'com.qa.testscripts.TC_Amazon_001')
-data.setCell(3, 3, 4702);
+data.setCell(3, 3, 4175);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'searchItem')
 data.setCell(4, 2, 'com.qa.testscripts.TC_Amazon_001')
-data.setCell(4, 3, 4465);
+data.setCell(4, 3, 4033);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'footerLinks')
+data.setCell(5, 2, 'com.qa.testscripts.TC_Amazon_002')
+data.setCell(5, 3, 1779);
 window.suiteTableData['Test_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Test_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Test_Automation_Suite">
               </div> <!-- times-div-Test_Automation_Suite -->
             </div> <!-- times-div -->
@@ -281,20 +306,12 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">searchItem(Beauty, Body lotions)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">The user is on amazon page</span>
-                <span class="reporter-method-output">The title is same as item name</span>
-                <span class="reporter-method-output">Did you mean</span>
-                <span class="reporter-method-output">Coco Soul Body Lotion with Coconut, Sandalwood & Ayurveda, Paraben, Silicones & Mineral Oil Free, 100% Vegan, 200 ml</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
               <span class="reporter-method-name">searchItem(Furniture, Wooden Tables)</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">The user is on amazon page</span>
                 <span class="reporter-method-output">The title is same as item name</span>
                 <span class="reporter-method-output">Priti Wooden Coffee Table Living Room Table Solid Wood in Conical Shape | Wooden Surface Top & Sturdy Metal Legs Industrial Sofa Table for Living Room Modern Design Home Furniture</span>
+                <span class="reporter-method-output">STAR WORK C Shaped End Table, Slim Couch Side Tables Slide Under Sofa Bed, Small Snack Tray Table for Coffee Laptop in Living Room,Easy Assembly</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -302,36 +319,36 @@ return data;
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">The user is on amazon page</span>
                 <span class="reporter-method-output">The title is same as item name</span>
+                <span class="reporter-method-output">Samsung Galaxy M52 5G (ICY Blue, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display</span>
                 <span class="reporter-method-output">Samsung Galaxy M33 5G (Mystique Green, 8GB, 128GB Storage) | 5nm Processor | 6000mAh Battery | Voice Focus | Upto 16GB RAM with RAM Plus | Travel Adapter to be Purchased Separately</span>
-                <span class="reporter-method-output">Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)</span>
                 <span class="reporter-method-output">Redmi 9A Sport (Coral Green, 2GB RAM, 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</span>
                 <span class="reporter-method-output">realme narzo 50i (Carbon Black, 4GB RAM+64GB Storage) - 6.5" inch Large Display | 5000mAh Battery</span>
                 <span class="reporter-method-output">OPPO A31 (Mystery Black, 6GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers</span>
-                <span class="reporter-method-output">OPPO A74 5G (Fantastic Purple,6GB RAM,128GB Storage) with No Cost EMI/Additional Exchange Offers</span>
                 <span class="reporter-method-output">Redmi Note 11T 5G (Matte Black, 6GB RAM, 128GB ROM)| Dimensity 810 5G | 33W Pro Fast Charging | Charger Included | Additional Exchange Offers|Get 2 Months of YouTube Premium Free!</span>
-                <span class="reporter-method-output">Samsung Galaxy M12 (Blue,4GB RAM, 64GB Storage) 6000 mAh with 8nm Processor | True 48 MP Quad Camera | 90Hz Refresh Rate</span>
+                <span class="reporter-method-output">Redmi 10A (Charcoal Black, 4GB RAM, 64GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster</span>
+                <span class="reporter-method-output">OPPO A74 5G (Fantastic Purple,6GB RAM,128GB Storage) with No Cost EMI/Additional Exchange Offers</span>
+                <span class="reporter-method-output">Tecno POVA 3 (Eco Black, 6GB RAM, 128GB Storage)| 7000mAh Battery |33W Fast Charger | 6.9" FHD+ Display | 90 Hz Refresh Rate | 50MP Triple Camera | Helio G88 Gaming Processor</span>
                 <span class="reporter-method-output">Samsung Galaxy M32 (Black, 6GB RAM, 128GB | FHD+ sAMOLED 90Hz Display | 6000mAh Battery | 64MP Quad Camera</span>
                 <span class="reporter-method-output">Redmi 10 Prime (Phantom Black 4GB RAM 64GB | Helio G88 with extendable RAM Upto 2GB | FHD+ 90Hz Adaptive Sync Display)</span>
                 <span class="reporter-method-output">Redmi 9 Activ (Coral Green, 4GB RAM, 64GB Storage)</span>
-                <span class="reporter-method-output">Redmi 10A (Charcoal Black, 4GB RAM, 64GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster</span>
-                <span class="reporter-method-output">Redmi Note 10S (Frost White, 6GB RAM, 64GB Storage) - Super Amoled Display | 64 MP Quad Camera | Alexa Built in | 33W Charger Included</span>
-                <span class="reporter-method-output">Nokia 5310 Dual SIM Keypad Phone with MP3 Player, Wireless FM Radio and Rear Camera with Flash | White/Red</span>
-                <span class="reporter-method-output">Samsung Galaxy M53 5G (Mystique Green, 6GB, 128GB Storage) | 108MP Camera | sAmoled+ 120Hz | 32MP Front Camera | 6nm Processor | 12GB RAM with RAM Plus | Travel Adapter to be Purchased Separately</span>
-                <span class="reporter-method-output">Apple iPhone 12 (128GB) - Blue</span>
                 <span class="reporter-method-output">Jio Phone Next 32 GB ROM, 2 GB RAM, Blue Smartphone</span>
-                <span class="reporter-method-output">realme narzo 50i (Mint Green, 4GB RAM+64GB Storage) - 6.5" inch Large Display | 5000mAh Battery</span>
-                <span class="reporter-method-output">Redmi Note 11 (Space Black, 6GB RAM, 64GB Storage) | 90Hz FHD+ AMOLED Display | Qualcomm® Snapdragon™ 680-6nm | Alexa Built-in | 33W Charger Included | Get 2 Months of YouTube Premium Free!</span>
-                <span class="reporter-method-output">OPPO A15s (Rainbow Silver, 4GB RAM, 64GB Storage) With No Cost EMI/Additional Exchange Offers</span>
+                <span class="reporter-method-output">Nokia 5310 Dual SIM Keypad Phone with MP3 Player, Wireless FM Radio and Rear Camera with Flash | White/Red</span>
+                <span class="reporter-method-output">Redmi Note 11 (Starburst White, 6GB RAM, 64GB Storage)|90Hz FHD+ AMOLED Display | Qualcomm® Snapdragon™ 680-6nm | Alexa Built-in | 33W Charger Included | Get 2 Months of YouTube Premium Free!</span>
+                <span class="reporter-method-output">Apple iPhone 13 Pro (1TB) - Gold</span>
+                <span class="reporter-method-output">Redmi Note 10S (Frost White, 6GB RAM, 64GB Storage) - Super Amoled Display | 64 MP Quad Camera | Alexa Built in | 33W Charger Included</span>
                 <span class="reporter-method-output">vivo iQOO Z6 44W (Raven Black, 6GB RAM, 128GB Storage) | 44W FlashCharge + 5000mAh Battery | FHD+ AMOLED Display | in-Display Fingerprint</span>
+                <span class="reporter-method-output">OPPO A15s (Rainbow Silver, 4GB RAM, 64GB Storage) With No Cost EMI/Additional Exchange Offers</span>
+                <span class="reporter-method-output">Samsung Galaxy M32 (Black, 4GB RAM, 64GB | FHD+ sAMOLED 90Hz Display | 6000mAh Battery | 64MP Quad Camera</span>
                 <span class="reporter-method-output">Redmi Note 10T 5G (Metallic Blue, 4GB RAM, 64GB Storage) | Dual 5G | 90Hz Adaptive Refresh Rate | MediaTek Dimensity 700 7nm Processor | 22.5W Charger Included</span>
-                <span class="reporter-method-output">Redmi 9A Sport (Carbon Black, 2GB RAM, 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</span>
-                <span class="reporter-method-output">realme narzo 50i (Mint Green, 2GB RAM+32GB Storage) - 6.5" inch Large Display | 5000mAh Battery</span>
                 <span class="reporter-method-output">Redmi 10 Prime (Phantom Black 6GB RAM 128GB ROM |Helio G88 with extendable RAM Upto 2GB |FHD+ 90Hz Adaptive Sync Display)</span>
-                <span class="reporter-method-output">Redmi 10 Prime (Astral White 4GB RAM 64GB ROM |Helio G88 with extendable RAM Upto 2GB |FHD+ 90Hz Adaptive Sync Display)</span>
                 <span class="reporter-method-output">Nokia 105 Single SIM (Black)</span>
+                <span class="reporter-method-output">Redmi 9 Activ (Metallic Purple, 6GB RAM, 128GB Storage)</span>
+                <span class="reporter-method-output">Redmi 10A (Slate Grey, 4GB RAM, 64GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster</span>
                 <span class="reporter-method-output">Nokia 105 Single SIM, Keypad Mobile Phone with Wireless FM Radio | Charcoal</span>
-                <span class="reporter-method-output">Lava X2 (2+32GB, Striped Blue) | Fingerprint Sensor | Octa Core Mediatek Processor | 6.5" HD+ Display | 8MP Dual AI Camera | 5000 mAh Battery | Type-C Charger</span>
-                <span class="reporter-method-output">Apple iPhone 13 Pro (1TB) - Silver</span>
+                <span class="reporter-method-output">Redmi 9A Sport (Carbon Black, 2GB RAM, 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</span>
+                <span class="reporter-method-output">Nokia 150 (2020) (Black)</span>
+                <span class="reporter-method-output">Samsung Galaxy M53 5G (Mystique Green, 6GB, 128GB Storage) | 108MP Camera | sAmoled+ 120Hz | 32MP Front Camera | 6nm Processor | 12GB RAM with RAM Plus | Travel Adapter to be Purchased Separately</span>
+                <span class="reporter-method-output">Apple iPhone 13 (128GB) - Pink</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -339,37 +356,48 @@ return data;
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">The user is on amazon page</span>
                 <span class="reporter-method-output">The title is same as item name</span>
+                <span class="reporter-method-output">Samsung 6.5 Kg 5 Star Inverter Fully-Automatic Top Loading Washing Machine (WA65T4262GG/TL, Light Grey, Wobble technology)</span>
                 <span class="reporter-method-output">Panasonic 6.5 kg 5 Star Semi-Automatic Top Loading Washing Machine (NA-W65E5ARB, Blue, Powerful Motor)</span>
-                <span class="reporter-method-output">AmazonBasics 7 Kg Fully Automatic Top Loading Washing Machine (2021, Grey)</span>
                 <span class="reporter-method-output">Samsung 6.5 kg Fully-Automatic Top Loading Washing Machine (WA65A4002VS/TL, Imperial Silver, Diamond Drum)</span>
                 <span class="reporter-method-output">Samsung 6.5 Kg 5 Star Inverter Fully-Automatic Top Loading Washing Machine (WA65T4262GG/TL, Light Grey, Wobble technology)</span>
                 <span class="reporter-method-output">Whirlpool 7 Kg 5 Star Semi-Automatic Top Loading Washing Machine (SUPERB ATOM 7.0, Grey Dazzle, TurboScrub Technology)</span>
-                <span class="reporter-method-output">Panasonic Econavi 8 Kg 5 Star Built-In Heater Fully-Automatic Top Loading Washing Machine (NA-F80V9LRB, Silver, Stain Master+)</span>
+                <span class="reporter-method-output">Fox Good Height Supreme Roller Heavy Duty Stand | 24-Wheels | Washing Machine, Dishwasher, Single Door Refrigerator | Adjustable Size | Made in Bharat</span>
                 <span class="reporter-method-output">LG 6.5 Kg 5 Star Smart Inverter Fully-Automatic Top Loading Washing Machine (T65SKSF4Z, Middle Free Silver)</span>
                 <span class="reporter-method-output">LG 7 Kg 5 Star Semi-Automatic Top Loading Washing Machine (P7020NGAZ, Dark Gray, Wind Jet Dry)</span>
                 <span class="reporter-method-output">IFB 6.5 Kg Fully-Automatic Front Loading Washing Machine (Elena SX 6510, SX -Silver, In-Built Heater)</span>
-                <span class="reporter-method-output">Bosch 6 kg 5 Star Inverter Fully Automatic Front Loading Washing Machine with In - built Heater (WLJ2016WIN, White )</span>
+                <span class="reporter-method-output">LG 7 kg 5 Star Inverter Fully-Automatic Top Loading Washing Machine (T70SKSF1Z, Middle Free Silver, TurboDrum)</span>
+                <span class="reporter-method-output">Whirlpool 7.5 Kg 5 Star Semi-Automatic Top Loading Washing Machine (ACE 7.5 SUPREME, Grey Dazzle)</span>
                 <span class="reporter-method-output">Whirlpool 7.5 Kg 5 Star Royal Plus Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL PLUS 7.5, Grey, Hard Water Wash)</span>
                 <span class="reporter-method-output">Panasonic 6.5 kg 5 Star Semi-Automatic Top Loading Washing Machine (NA-W65E5ARB, Blue, Powerful Motor)</span>
-                <span class="reporter-method-output">Whirlpool 7 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 7.0 GENX, Grey, Hard Water Wash)</span>
-                <span class="reporter-method-output">Whirlpool 7.5 Kg 5 Star Semi-Automatic Top Loading Washing Machine (ACE 7.5 SUPREME, Grey Dazzle)</span>
-                <span class="reporter-method-output">Samsung 6.0 Kg Inverter 5 Star Fully-Automatic Front Loading Washing Machine (WW60R20GLMA/TL, White, Hygiene Steam)</span>
-                <span class="reporter-method-output">LG 6.5 Kg 5 Star Smart Inverter Fully-Automatic Top Loading Washing Machine (T65SKSF4Z, Middle Free Silver)</span>
-                <span class="reporter-method-output">LG 7 kg 5 Star Inverter Fully-Automatic Top Loading Washing Machine (T70SKSF1Z, Middle Free Silver, TurboDrum)</span>
+                <span class="reporter-method-output">Bosch 6 kg 5 Star Inverter Fully Automatic Front Loading Washing Machine with In - built Heater (WLJ2016WIN, White )</span>
                 <span class="reporter-method-output">IFB 7 Kg Fully-Automatic Top Loading Washing Machine (TL RES Aqua, Light Grey, Smart Sense,3D Wash Technology)</span>
-                <span class="reporter-method-output">Onida 6.5 kg Washer Only (WS65WLPT1LR Liliput, Lava Red)</span>
-                <span class="reporter-method-output">Samsung 7 kg Fully-Automatic Top Loading Washing Machine (WA70A4002GS/TL, Imperial Silver, Diamond drum)</span>
-                <span class="reporter-method-output">LG 9.0 Kg 5 Star Smart Inverter Fully-Automatic Top Loading Washing Machine (T90SJSF1Z, Middle Free Silver, Jet Spray+)</span>
-                <span class="reporter-method-output">Whirlpool 6 Kg 5 Star Semi-Automatic Top Loading Washing Machine (SUPERB ATOM 60I, Grey Dazzle)</span>
-                <span class="reporter-method-output">Godrej 6.2 Kg Fully-Automatic Top Loading Washing Machine (WT EON 620 A Gp Gr, Grey)</span>
-                <span class="reporter-method-output">Godrej 6.2 Kg Fully-Automatic Top Loading Washing Machine (WT EON 620 AP Gp Gr, Graphic Grey)</span>
-                <span class="reporter-method-output">Whirlpool 7 Kg 5 Star Royal Plus Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL PLUS 7.0, Grey, Hard Water Wash)</span>
-                <span class="reporter-method-output">DMR Portable 3 kg Mini Top-Load Washing Machine with Dryer Basket (DMR 30-1208, Black)</span>
-                <span class="reporter-method-output">Panasonic 7 Kg 5 Star Fully-Automatic Top Loading Washing Machine (NA-F70LF1HRB, Grey)</span>
-                <span class="reporter-method-output">Whirlpool 8 Kg 5 Star Semi-Automatic Top Loading Washing Machine</span>
                 <span class="reporter-method-output">AmazonBasics 6.5 kg Fully-Automatic Top Load Washing Machine (Grey/Black, Full Metal body, LED Display)</span>
-                <span class="reporter-method-output">LG 7 Kg 5 Star Semi-Automatic Top Loading Washing Machine (P7020NGAZ, Dark Gray, Wind Jet Dry)</span>
-                <span class="reporter-method-output">Samsung 6.5 kg Fully-Automatic Top Loading Washing Machine (WA65A4002VS/TL, Imperial Silver, Diamond Drum)</span>
+                <span class="reporter-method-output">Amazon Basics 6 Kg Fully Automatic Top Loading Washing machine</span>
+                <span class="reporter-method-output">Samsung 6.0 Kg Inverter 5 Star Fully-Automatic Front Loading Washing Machine (WW60R20GLMA/TL, White, Hygiene Steam)</span>
+                <span class="reporter-method-output">Whirlpool 7 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 7.0 GENX, Grey, Hard Water Wash)</span>
+                <span class="reporter-method-output">LG 9.0 Kg 5 Star Smart Inverter Fully-Automatic Top Loading Washing Machine (T90SJSF1Z, Middle Free Silver, Jet Spray+)</span>
+                <span class="reporter-method-output">Samsung 7 kg Fully-Automatic Top Loading Washing Machine (WA70A4002GS/TL, Imperial Silver, Diamond drum)</span>
+                <span class="reporter-method-output">Whirlpool 6 Kg 5 Star Semi-Automatic Top Loading Washing Machine (SUPERB ATOM 60I, Grey Dazzle)</span>
+                <span class="reporter-method-output">Onida 6.5 kg Washer Only (WS65WLPT1LR Liliput, Lava Red)</span>
+                <span class="reporter-method-output">Whirlpool 7 Kg 5 Star Royal Plus Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL PLUS 7.0, Grey, Hard Water Wash)</span>
+                <span class="reporter-method-output">Godrej 6.2 Kg Fully-Automatic Top Loading Washing Machine (WT EON 620 AP Gp Gr, Graphic Grey)</span>
+                <span class="reporter-method-output">AmazonBasics 6.5 kg Fully-Automatic Top Load Washing Machine (Grey/Black, Full Metal body, LED Display)</span>
+                <span class="reporter-method-output">Onida 7 Kg 5 Star Semi-Automatic Top Loading Washing Machine (S70OIB, White)</span>
+                <span class="reporter-method-output">Whirlpool 8 Kg 5 Star Semi-Automatic Top Loading Washing Machine</span>
+                <span class="reporter-method-output">Godrej 6.2 Kg Fully-Automatic Top Loading Washing Machine (WT EON 620 A Gp Gr, Grey)</span>
+                <span class="reporter-method-output">IFB 7 Kg 5 Star Front Load Washing Machine 2X Power Dual Steam (ELITE MXS 7012, Mocha, Active Color Protection, Hard Water Wash)</span>
+                <span class="reporter-method-output">IFB 8 Kg 5 Star Front Load Washing Machine with 2X Power Dual Steam (SENATOR MXS 8012, Mocha, Active Color Protection, Hard Water Wash)</span>
+                <span class="reporter-method-output">Panasonic Econavi 8 Kg 5 Star Built-In Heater Fully-Automatic Top Loading Washing Machine (NA-F80V9LRB, Silver, Stain Master+)</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">searchItem(Beauty, Body lotions)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">The user is on amazon page</span>
+                <span class="reporter-method-output">The title is same as item name</span>
+                <span class="reporter-method-output">Did you mean</span>
+                <span class="reporter-method-output">Vaseline Intensive Care 24 hr nourishing Cocoa Glow Body Lotion with Cocoa And Shea Butter, Restores Glow for all skin type - 400 ml</span>
+                <span class="reporter-method-output">Coco Soul Body Lotion with Coconut, Sandalwood & Ayurveda, Paraben, Silicones & Mineral Oil Free, 100% Vegan, 200 ml</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -377,28 +405,28 @@ return data;
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">The user is on amazon page</span>
                 <span class="reporter-method-output">The title is same as item name</span>
+                <span class="reporter-method-output">The Six + 1 Wish</span>
+                <span class="reporter-method-output">The Greatest Novels of Mark Twain (Deluxe Hardbound Edition)</span>
                 <span class="reporter-method-output">The Da Vinci Code: (Robert Langdon Book 2) (Robert Langdon, 2)</span>
                 <span class="reporter-method-output">The Da Vinci Code (Abridged Edition)</span>
                 <span class="reporter-method-output">The Da Vinci Code</span>
                 <span class="reporter-method-output">DA VINCI CODE</span>
-                <span class="reporter-method-output">The Da Vinci Code</span>
                 <span class="reporter-method-output">The Da Vinci Code: A Novel: 2 (Robert Langdon)</span>
-                <span class="reporter-method-output">The Da Vinci Code: (Robert Langdon Book 2)+The Lost Symbol: (Robert Langdon Book 3)(Set of 2books)</span>
-                <span class="reporter-method-output">The Da Vinci Code 10th Anniversary Edition</span>
-                <span class="reporter-method-output">1984 (Deluxe Hardbound Edition)</span>
-                <span class="reporter-method-output">Greatest Works of Edgar Allan Poe</span>
                 <span class="reporter-method-output">The Da Vinci Code</span>
                 <span class="reporter-method-output">The Da Vinci Code: Facts and Fallacies at the 92nd Street Y</span>
+                <span class="reporter-method-output">The Da Vinci Code 10th Anniversary Edition</span>
+                <span class="reporter-method-output">Collection of Shakespeare's Greatest Stories (Box Set of 10 Books) For Children</span>
+                <span class="reporter-method-output">Greatest Works of Edgar Allan Poe</span>
+                <span class="reporter-method-output">The Da Vinci Code: A Novel: 2 (Robert Langdon)</span>
                 <span class="reporter-method-output">Breaking the Da Vinci Code</span>
                 <span class="reporter-method-output">Davinci Code</span>
+                <span class="reporter-method-output">The Da Vinci Code</span>
+                <span class="reporter-method-output">The Da Vinci Code: (Robert Langdon Book 2)+The Lost Symbol: (Robert Langdon Book 3)(Set of 2books)</span>
                 <span class="reporter-method-output">The Da Vinci Code Exposed: What They Don't Want You to Know</span>
                 <span class="reporter-method-output">The Da Vinci Code</span>
-                <span class="reporter-method-output">Cracking the Da Vinci Code: The Unauthorized Guide to the Facts Behind the Fiction</span>
                 <span class="reporter-method-output">The Da Vinci Code Revisited</span>
-                <span class="reporter-method-output">Collection of Shakespeare's Greatest Stories (Box Set of 10 Books) For Children</span>
-                <span class="reporter-method-output">The Complete Novels of Sherlock Holmes</span>
                 <span class="reporter-method-output">Think & Grow Rich: THE 21st CENTURY EDITION</span>
-                <span class="reporter-method-output">The Greatest Novels of Mark Twain (Deluxe Hardbound Edition)</span>
+                <span class="reporter-method-output">The Dhandho Investor: The Low-Risk Value Method to High Returns</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -423,27 +451,42 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchItem(Books, Da vinci code)</span>
-                <span class="method-start">10018 ms</span>
+                <span class="method-start">17652 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchItem(Electronics, Mobile phones)</span>
-                <span class="method-start">15316 ms</span>
+                <span class="method-start">22244 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchItem(Furniture, Wooden Tables)</span>
-                <span class="method-start">20520 ms</span>
+                <span class="method-start">26421 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchItem(Appliances, Washing machines)</span>
-                <span class="method-start">27158 ms</span>
+                <span class="method-start">30456 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchItem(Beauty, Body lotions)</span>
-                <span class="method-start">31871 ms</span>
+                <span class="method-start">41571 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">36339 ms</span>
+                <span class="method-start">51298 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.testscripts.TC_Amazon_002</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(Chrome, https://www.amazon.in/)</span>
+                <span class="method-start">51751 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">footerLinks</span>
+                <span class="method-start">65780 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">67561 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
