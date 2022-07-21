@@ -37,7 +37,7 @@ public class TC_Amazon_003 extends TestBase {
 		List<WebElement> AllOptions = Category.getOptions();
 
 		System.out.println("Total no. of items present in the category select element are : " + AllOptions.size());
-		boolean condition = AllOptions.size()>=50;
+		boolean condition = AllOptions.size()<=50;
 		if(condition) {
 			sAssert.assertTrue(condition);
 			Reporter.log("Items are present in the list");

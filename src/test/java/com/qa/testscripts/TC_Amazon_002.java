@@ -17,7 +17,7 @@ public class TC_Amazon_002 extends TestBase{
 				List<WebElement> AllLinks = AmazonOR.getAllFooterLinks();				
 				int size= AllLinks.size();
 				
-				boolean condition = size==100;
+				boolean condition = size<=100;
 				
 				if(condition) {
 					
